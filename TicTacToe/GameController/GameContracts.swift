@@ -14,9 +14,11 @@ enum GameResult {
 
 protocol GameVMProtocol: class {
     var delegate: GameVMOutputDelegate? { get set }
-    func checkScore(indexPath: Int) -> Player
+    func checkScore(indexPath: Int) -> (player: Player, nextTurn: String)
+    func resetGame()
 }
 
 protocol GameVMOutputDelegate: class {
     func gameResult(player: Player?, result: GameResult)
+    func startNewGame()
 }
