@@ -15,12 +15,13 @@ final class GameCell: UICollectionViewCell {
         gameText.layer.borderWidth = 2.0
         gameText.text = ""
         gameText.layer.borderColor = UIColor.black.cgColor
+        isCellUsed = false
     }
     
     var player: Player! {
         didSet {
             gameText.font = UIFont.systemFont(ofSize: gameText.bounds.size.height)
-            if player.playerName == .playerOne {
+            if player.playerType == .playerOne {
                 gameText.text = "X"
                 
             } else {
