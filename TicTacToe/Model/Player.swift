@@ -7,14 +7,13 @@
 
 import Foundation
 
-enum PlayerType {
-    case playerOne
-    case playerTwo
+enum PlayerType: String {
+    case playerOne = "Player One"
+    case playerTwo = "Player Two"
 }
 
 struct Player {
-    var playerName: PlayerType
-    var positions: [Int]
+    var playerType: PlayerType
+    var playerMoves: [Int]
     var isPlayerTurn: Bool
-    var boardIndex: Int?
 }
