@@ -2,7 +2,7 @@
 //  GameVC.swift
 //  TicTacToe
 //
-//  Created by Kemal Ekren on 27.06.2021.
+
 //
 
 import UIKit
@@ -48,7 +48,7 @@ extension GameVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
             let cell = collectionView.cellForItem(at: indexPath) as! GameCell
         
             if !cell.isCellUsed {
-                let result = self.vm.checkScore(indexPath: indexPath.row)
+                let result = self.vm.checkScore(move: indexPath.row)
                 cell.player = result.player
                 playerLabel.text = result.nextTurn
                 cell.isCellUsed = true

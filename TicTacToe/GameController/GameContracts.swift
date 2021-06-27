@@ -1,8 +1,7 @@
 //
 //  GameContracts.swift
 //  TicTacToe
-//
-//  Created by Kemal Ekren on 27.06.2021.
+
 //
 
 import Foundation
@@ -14,7 +13,7 @@ enum GameResult {
 
 protocol GameVMProtocol: class {
     var delegate: GameVMOutputDelegate? { get set }
-    func checkScore(indexPath: Int) -> (player: Player, nextTurn: String)
+    func checkScore(move: Int) -> (player: Player, nextTurn: String)
     func resetGame()
 }
 
