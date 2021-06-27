@@ -19,6 +19,7 @@
 		0A74508F2688390600555196 /* GameVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A74508E2688390600555196 /* GameVM.swift */; };
 		0A74509A26883A6E00555196 /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A74509926883A6D00555196 /* GameCell.swift */; };
 		0A7450A3268890EE00555196 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7450A2268890EE00555196 /* Player.swift */; };
+		0A7450AB268893E300555196 /* GameContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7450AA268893E300555196 /* GameContracts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		0A74508E2688390600555196 /* GameVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVM.swift; sourceTree = "<group>"; };
 		0A74509926883A6D00555196 /* GameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
 		0A7450A2268890EE00555196 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		0A7450AA268893E300555196 /* GameContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameContracts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 				0A745089268838E700555196 /* GameVC.storyboard */,
 				0A74508E2688390600555196 /* GameVM.swift */,
 				0A74509926883A6D00555196 /* GameCell.swift */,
+				0A7450AA268893E300555196 /* GameContracts.swift */,
 			);
 			path = GameController;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A745085268838D600555196 /* GameBuilder.swift in Sources */,
+				0A7450AB268893E300555196 /* GameContracts.swift in Sources */,
 				0A7450492688384B00555196 /* AppDelegate.swift in Sources */,
 				0A74507D268838CA00555196 /* GameVC.swift in Sources */,
 				0A74508F2688390600555196 /* GameVM.swift in Sources */,

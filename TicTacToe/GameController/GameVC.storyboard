@@ -1,7 +1,95 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--GameVC-->
+        <scene sceneID="kOK-qs-rkN">
+            <objects>
+                <viewController storyboardIdentifier="GameVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wCE-6J-vJU" customClass="GameVC" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kvo-DP-wd1">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" delaysContentTouches="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DYt-0k-h7b">
+                                <rect key="frame" x="15" y="144" width="398" height="738"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KSu-wG-W4w">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="gameCell" id="kI9-5E-Sp3" customClass="GameCell" customModule="TicTacToe" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="26" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0QT-XW-bLZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="26" height="48"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpA-64-ylN">
+                                                    <rect key="frame" x="0.0" y="0.0" width="26" height="48"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                    <color key="textColor" red="0.0071885850690000001" green="0.0071885850690000001" blue="0.0071885850690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="wpA-64-ylN" firstAttribute="top" secondItem="0QT-XW-bLZ" secondAttribute="top" id="F96-oa-xxn"/>
+                                                <constraint firstItem="wpA-64-ylN" firstAttribute="leading" secondItem="0QT-XW-bLZ" secondAttribute="leading" id="sJc-MY-vCW"/>
+                                                <constraint firstAttribute="trailing" secondItem="wpA-64-ylN" secondAttribute="trailing" id="tin-m5-Idq"/>
+                                                <constraint firstAttribute="bottom" secondItem="wpA-64-ylN" secondAttribute="bottom" id="z0K-kt-tGW"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="gameText" destination="wpA-64-ylN" id="0IL-ga-weh"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rS6-sC-AKY">
+                                <rect key="frame" x="0.0" y="64" width="428" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Hbh-Sx-mb2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZjV-9X-1gm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DYt-0k-h7b" firstAttribute="leading" secondItem="ZjV-9X-1gm" secondAttribute="leading" constant="15" id="0DK-dw-p6y"/>
+                            <constraint firstItem="DYt-0k-h7b" firstAttribute="centerX" secondItem="kvo-DP-wd1" secondAttribute="centerX" id="IyT-x7-xi1"/>
+                            <constraint firstItem="DYt-0k-h7b" firstAttribute="top" secondItem="rS6-sC-AKY" secondAttribute="bottom" constant="30" id="PIE-yU-hYQ"/>
+                            <constraint firstItem="rS6-sC-AKY" firstAttribute="leading" secondItem="ZjV-9X-1gm" secondAttribute="leading" id="Zdx-18-e2p"/>
+                            <constraint firstItem="ZjV-9X-1gm" firstAttribute="bottom" secondItem="DYt-0k-h7b" secondAttribute="bottom" constant="10" id="dBf-h5-Qu2"/>
+                            <constraint firstItem="rS6-sC-AKY" firstAttribute="top" secondItem="ZjV-9X-1gm" secondAttribute="top" constant="20" id="wF4-72-S8N"/>
+                            <constraint firstItem="ZjV-9X-1gm" firstAttribute="trailing" secondItem="rS6-sC-AKY" secondAttribute="trailing" id="wQz-Tk-YI9"/>
+                            <constraint firstItem="ZjV-9X-1gm" firstAttribute="trailing" secondItem="DYt-0k-h7b" secondAttribute="trailing" constant="15" id="x31-lK-sMj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="DYt-0k-h7b" id="G9B-lI-e0z"/>
+                        <outlet property="playerLabel" destination="rS6-sC-AKY" id="E9o-iV-9PJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xAi-Qh-wjL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-618.2242990654205" y="-542.33261339092871"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

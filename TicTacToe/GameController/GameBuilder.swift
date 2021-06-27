@@ -2,7 +2,17 @@
 //  GameBuilder.swift
 //  TicTacToe
 //
-//  Created by Kemal Ekren on 27.06.2021.
+//
 //
 
-import Foundation
+import UIKit
+
+final class GameBuilder {
+
+    static func make()-> GameVC {
+        let storyBoard = UIStoryboard(name: "GameVC", bundle: nil)
+        let viewController = storyBoard.instantiateViewController(withIdentifier: "GameVC") as! GameVC
+        viewController.vm = GameVM()
+        return viewController
+    }
+}
