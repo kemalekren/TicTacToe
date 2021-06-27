@@ -7,8 +7,14 @@
 
 import Foundation
 
+enum PlayerType {
+    case playerOne
+    case playerTwo
+}
+
 struct Player {
-    var playerName: Int
-    var positions: [IndexPath]
+    var playerName: PlayerType
+    var positions: [Int]
     var isPlayerTurn: Bool
+    var boardIndex: Int?
 }
